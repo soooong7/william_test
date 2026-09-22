@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="브라우저에서 배우는 Model Serving 입문 학습 사이트"
+    />
+    <title>Model Serving 학습</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">본문으로 건너뛰기</a>
+    <div class="site-shell">
+      <header class="site-header">
+        <div>
+          <p class="eyebrow">AIOps Learning · 12 topics</p>
+          <h1>Model Serving 학습</h1>
+          <p class="site-intro">
+            모델을 사용자에게 전달하는 여러 방법을 개념과 시뮬레이션으로 익혀 보세요.
+          </p>
+        </div>
+        <div class="progress-summary" aria-label="학습 진행률">
+          <span class="progress-label">진행률</span>
+          <strong id="progress-text">0 / 12 완료</strong>
+          <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="12" aria-valuenow="0" aria-label="전체 학습 진행률">
+            <span id="progress-bar" class="progress-bar"></span>
+          </div>
+        </div>
+      </header>
+
+      <div id="js-error" class="alert alert-error" role="alert">
+        학습 내용을 불러오지 못했습니다. 아래 목록에서 다시 시작해 주세요.
+      </div>
+      <noscript>
+        <div class="alert alert-warning" role="alert">
+          이 학습 페이지는 JavaScript가 필요합니다. 브라우저 설정에서 JavaScript를 켜 주세요.
+        </div>
+      </noscript>
+
+      <div class="learning-layout">
+        <aside class="topic-sidebar" aria-labelledby="topics-heading">
+          <div class="section-heading">
+            <p class="eyebrow">Curriculum</p>
+            <h2 id="topics-heading">학습 목록</h2>
+          </div>
+          <nav aria-label="Model Serving 학습 주제">
+            <ol id="curriculum-list" class="topic-list">
+              <li><a href="#intro-model-serving">1. Introducing Model Serving</a></li>
+              <li><a href="#model-serving-patterns">2. Introducing Model Serving Patterns</a></li>
+            </ol>
+          </nav>
+        </aside>
+
+        <main id="main-content" class="lesson" tabindex="-1">
+          <article id="lesson-content" aria-labelledby="lesson-title">
+            <header class="lesson-header">
+              <p id="lesson-position" class="lesson-position">현재 주제 · 1 / 12</p>
+              <h2 id="lesson-title">Model Serving 학습을 시작합니다</h2>
+              <p id="lesson-objective" class="objective">
+                목록에서 주제를 선택하면 학습 목표가 여기에 표시됩니다.
+              </p>
+            </header>
+
+            <section class="content-section" aria-labelledby="concepts-heading">
+              <h3 id="concepts-heading">핵심 개념</h3>
+              <div id="lesson-concepts" class="prose">
+                <p>각 주제의 핵심 개념을 읽고 다음 예시로 이동해 보세요.</p>
+              </div>
+            </section>
+
+            <section class="example-panel" aria-labelledby="example-heading">
+              <div class="panel-heading">
+                <div>
+                  <p class="eyebrow">Example / Flow</p>
+                  <h3 id="example-heading">예시와 흐름</h3>
+                </div>
+                <span class="simulation-badge">설명용 시뮬레이션</span>
+              </div>
+              <p class="simulation-note">
+                아래 흐름은 실제 모델·인프라를 실행하지 않는 학습용 예시입니다.
+              </p>
+              <div id="lesson-example" class="flow-box">
+                <p>입력 → 모델 런타임 → 추론 결과</p>
+              </div>
+            </section>
+
+            <section class="comparison-panel" aria-labelledby="comparison-heading">
+              <h3 id="comparison-heading">적용할 때 비교할 점</h3>
+              <div id="lesson-comparison" class="prose">
+                <p>이 방식이 다른 서빙 방식과 어떻게 다른지 확인합니다.</p>
+              </div>
+            </section>
+
+            <section class="takeaway-panel" aria-labelledby="takeaway-heading">
+              <p class="eyebrow">Check your understanding</p>
+              <h3 id="takeaway-heading">학습 확인</h3>
+              <p id="lesson-takeaway">이 주제에서 기억할 내용을 질문으로 확인해 보세요.</p>
+            </section>
+
+            <div class="lesson-actions" aria-label="학습 완료 및 주제 이동">
+              <button id="complete-button" class="button button-primary" type="button">
+                이 주제 완료 표시
+              </button>
+              <span id="save-status" class="save-status" role="status" aria-live="polite"></span>
+            </div>
+          </article>
+
+          <nav class="lesson-navigation" aria-label="주제 이동">
+            <a id="previous-topic" class="button button-secondary" href="#" rel="prev">← 이전 주제</a>
+            <a class="button button-quiet" href="#topics-heading">목록으로</a>
+            <a id="next-topic" class="button button-secondary" href="#" rel="next">다음 주제 →</a>
+          </nav>
+        </main>
+      </div>
+    </div>
+
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>
