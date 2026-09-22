@@ -7,7 +7,7 @@
   - _Requirements: 1.1, 1.2, 1.3, 1.4, 3.1, 3.2, 3.3, 3.4_
   - _Done when: `npm test`가 12개 주제의 순서·필수 콘텐츠·기술명 검증을 모두 통과하고 `node --check src/curriculum.js`가 성공한다._
 
-- [ ] 2. 로컬 학습 진행 상태 저장을 구현한다
+- [x] 2. 로컬 학습 진행 상태 저장을 구현한다
   - `src/progress.js`에 완료 slug 목록과 마지막 slug를 저장·조회하는 함수를 작성한다. 현재 curriculum에 없는 slug, 잘못된 JSON, 누락 필드, 저장소 접근 예외는 빈 진행 상태로 처리하고, `tests/progress.test.js`에서 메모리 저장소와 오류 저장소를 주입해 이를 검증한다.
   - _Requirements: 2.3, 2.4_
   - _Done when: `npm test`가 완료/마지막 주제의 저장·복원, 손상 데이터 초기화, 알 수 없는 slug 제거, 저장소 오류의 안전한 처리를 통과한다._
