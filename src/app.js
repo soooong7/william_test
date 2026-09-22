@@ -3,6 +3,7 @@ import { loadProgress, saveProgress } from "./progress.js";
 
 const totalTopics = curriculum.length;
 const validSlugs = curriculumSlugs;
+const listHash = "topics-heading";
 const elements = {
   list: document.querySelector("#curriculum-list"),
   progressText: document.querySelector("#progress-text"),
@@ -161,6 +162,10 @@ function requestedSlug() {
 
 function handleHashChange() {
   const slug = window.location.hash.slice(1);
+  if (slug === listHash) {
+    elements.list.querySelector("a")?.focus();
+    return;
+  }
   render(slug || progress.last || validSlugs[0], { remember: Boolean(slug), focus: true });
 }
 
@@ -191,4 +196,7 @@ elements.next.addEventListener("click", (event) => {
 
 window.addEventListener("hashchange", handleHashChange);
 elements.jsError.hidden = true;
-render(requestedSlug(), { remember: !window.location.hash });
+const initialHash = window.location.hash.slice(1);
+render(initialHash === listHash ? progress.last || validSlugs[0] : requestedSlug(), {
+  remember: !window.location.hash
+});

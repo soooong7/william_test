@@ -22,7 +22,7 @@
   - _Requirements: 1.1, 1.3, 2.1, 2.2, 2.3, 2.4, 2.5, 4.4_
   - _Done when: `npm test`와 `node --check src/app.js`가 통과하고, `app.js`의 hash 변경·잘못된 slug·복원·완료·이전/다음 처리와 오류 안내가 `index.html`의 실제 요소를 대상으로 연결되어 있다._
 
-- [ ] 5. 정적 사이트의 전체 연결과 회귀 검사를 마무리한다
+- [x] 5. 정적 사이트의 전체 연결과 회귀 검사를 마무리한다
   - 모든 모듈 경로와 `index.html`의 module script를 확인하고, 콘텐츠·진행 상태·UI 코드가 사용되지 않은 채 남지 않도록 정리한다. Node 테스트와 구문 검사를 한 번에 실행할 수 있는 검증 명령을 유지하고 정적 파일의 공백·오류를 점검한다.
   - _Requirements: 1.1, 1.2, 1.3, 1.4, 2.1, 2.2, 2.3, 2.4, 2.5, 3.1, 3.2, 3.3, 3.4, 4.1, 4.2, 4.3, 4.4_
   - _Done when: `npm test && node --check src/app.js && node --check src/progress.js && node --check src/curriculum.js && git diff --check`가 모두 성공하고, `index.html`이 `src/app.js`를 module로 로드하며 모든 필수 소스 파일이 서로 참조된다._
